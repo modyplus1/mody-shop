@@ -43,7 +43,43 @@ main{max-width:1180px;margin:auto;padding:24px 20px 60px}
     </nav>
     <button class="gold-btn" onclick="goTo('manage')">＋ أضف منتج</button>
   </div>
-</header>
+</header><div class="top-slider">
+  <img id="topSlide"
+       src="./163a2586-ff15-4d56-bb4f-ffcc88c626af.jpeg"
+       alt="صور المتجر">
+</div>
+
+<style>
+.top-slider {
+  width: 100%;
+  padding: 0 12px;
+  margin: 15px auto;
+  box-sizing: border-box;
+}
+.top-slider img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+</style>
+
+<script>
+const slides = [
+  "./163a2586-ff15-4d56-bb4f-ffcc88c626af.jpeg",
+  "./اسم-الصورة-الثانية.jpeg"
+];
+
+let slideIndex = 0;
+
+setInterval(() => {
+  slideIndex = (slideIndex + 1) % slides.length;
+
+  document.getElementById("topSlide").src =
+    slides[slideIndex];
+}, 3000);
+</script>
 <main>
   <section id="homeView">
     <div class="hero">
