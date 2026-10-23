@@ -71,13 +71,16 @@ const slides = [
   "./859DF5BF-CE4D-4C0B-A62A-3D3F1FFB32A3.png"
 ];
 
+const topSlide = document.getElementById("topSlide");
 let slideIndex = 0;
+
+topSlide.onerror = function () {
+  console.log("تعذر تحميل الصورة:", topSlide.src);
+};
 
 setInterval(() => {
   slideIndex = (slideIndex + 1) % slides.length;
-
-  document.getElementById("topSlide").src =
-    slides[slideIndex];
+  topSlide.src = slides[slideIndex];
 }, 3000);
 </script>
 <main>
