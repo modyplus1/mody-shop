@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)file:///C:/Users/MODY/Downloads/Telegram%20Desktop/index.html -->
+<html lang="ar" dir="rtl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>متجر MODY</title>
+<style>
+:root{--bg:#0b0b0d;--panel:#151518;--panel2:#1e1e22;--gold:#d9b45b;--gold2:#f2d889;--text:#f5f2e9;--muted:#aaa6a0;--line:#343238;--danger:#e45c5c;--green:#75c995}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.7}
+button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}
+header{position:sticky;top:0;z-index:5;background:#0b0b0df2;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar{max-width:1180px;margin:auto;padding:14px 20px;display:flex;align-items:center;gap:16px;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px;min-width:0}.logo{width:45px;height:45px;border:1px solid var(--gold);border-radius:14px;display:grid;place-items:center;color:var(--gold);font-weight:bold;font-size:20px}.brand h1{font-size:18px;margin:0;color:var(--gold2)}.brand small{display:block;color:var(--muted);font-size:11px}
+.nav{display:flex;gap:6px;flex-wrap:wrap}.nav button,.outline{background:transparent;color:var(--text);padding:9px 13px;border:1px solid transparent;border-radius:10px}.nav button:hover,.nav button.active{border-color:#776333;color:var(--gold2);background:#d9b45b12}
+.gold-btn{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#19150b;font-weight:bold;padding:10px 16px;border-radius:10px}.gold-btn:hover{filter:brightness(1.08)}.outline{border-color:var(--line)}
+main{max-width:1180px;margin:auto;padding:24px 20px 60px}
+.hero{background:radial-gradient(ellipse at 12% 20%,#6e54262c,transparent 45%),linear-gradient(120deg,#1b1916,#111114 65%);border:1px solid #514426;border-radius:22px;padding:clamp(24px,5vw,56px);display:grid;grid-template-columns:1.4fr .6fr;align-items:center;gap:20px;overflow:hidden}
+.eyebrow{color:var(--gold);font-size:12px;font-weight:bold;letter-spacing:1px}.hero h2{font-size:clamp(27px,4vw,46px);line-height:1.3;margin:8px 0 14px}.hero p{color:var(--muted);max-width:610px;margin:0 0 20px}.hero-mark{justify-self:center;font-size:clamp(90px,17vw,180px);color:#d9b45b;filter:drop-shadow(0 8px 35px #d9b45b28);line-height:1}
+.quick-stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.stat{background:#ffffff08;border:1px solid var(--line);border-radius:12px;padding:10px 14px;min-width:110px}.stat b{display:block;color:var(--gold2);font-size:20px}.stat span{font-size:11px;color:var(--muted)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:30px 0 14px}.section-head h2{font-size:23px;margin:0}.section-head p{color:var(--muted);margin:3px 0 0;font-size:13px}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.search{flex:1;min-width:180px}.field{width:100%;background:#0e0e10;color:var(--text);border:1px solid var(--line);padding:11px 12px;border-radius:10px;outline:none}.field:focus{border-color:var(--gold)}select.field{min-width:140px}.categories{display:flex;gap:8px;overflow-x:auto;padding:2px 0 10px}.categories button{white-space:nowrap;border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--muted);padding:8px 15px}.categories button.active{background:var(--gold);border-color:var(--gold);color:#18130a;font-weight:bold}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.product{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:.18s}.product:hover{transform:translateY(-3px);border-color:#776333}.product-image{height:175px;background:linear-gradient(145deg,#262329,#111114);display:grid;place-items:center;position:relative;overflow:hidden}.product-image img{width:100%;height:100%;object-fit:cover}.placeholder{font-size:54px;color:var(--gold)}.stock{position:absolute;top:10px;right:10px;background:#0a0a0bd9;color:var(--gold2);font-size:10px;padding:3px 8px;border-radius:20px}.product-info{padding:13px;display:flex;flex-direction:column;gap:6px;flex:1}.product-category{color:var(--gold);font-size:11px}.product h3{font-size:15px;margin:0;line-height:1.5}.product-desc{color:var(--muted);font-size:12px;margin:0;min-height:36px}.price-row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto;padding-top:8px}.price{color:var(--gold2);font-size:18px;font-weight:bold}.price small{font-size:10px;color:var(--muted);font-weight:normal}.card-actions{display:flex;gap:7px;margin-top:9px}.card-actions button{flex:1;font-size:12px;padding:8px 6px;border-radius:8px}.buy{background:var(--gold);color:#171208;font-weight:bold}.details{background:var(--panel2);color:var(--text);border:1px solid var(--line)}
+.empty{grid-column:1/-1;text-align:center;border:1px dashed var(--line);border-radius:16px;padding:40px 15px;color:var(--muted)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;margin-top:20px}.panel h2{margin:0 0 4px}.panel>p{color:var(--muted);font-size:13px;margin:0 0 18px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.form-row{display:flex;flex-direction:column;gap:6px}.form-row label{font-size:12px;color:var(--muted)}.span2{grid-column:1/-1}.form-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.notice{background:#d9b45b14;border:1px solid #6b5628;color:#e8d69f;padding:12px;border-radius:10px;font-size:12px;margin-top:14px}
+.hidden{display:none!important}.footer{border-top:1px solid var(--line);margin-top:45px;padding:25px 0;color:var(--muted);font-size:12px;text-align:center}
+.toast{position:fixed;bottom:20px;left:20px;background:#212126;border:1px solid #66552c;color:var(--gold2);border-radius:12px;padding:12px 17px;box-shadow:0 10px 35px #0008;z-index:20;max-width:90vw}
+.modal-backdrop{position:fixed;inset:0;background:#000a;display:grid;place-items:center;padding:16px;z-index:30}.modal{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;width:min(540px,100%);max-height:90vh;overflow:auto}.modal h2{margin-top:0}.modal-buttons{display:flex;gap:8px;justify-content:flex-start;margin-top:16px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{grid-template-columns:1fr .3fr}.nav button{padding:8px}}
+@media(max-width:650px){.topbar{align-items:flex-start;flex-wrap:wrap}.brand{flex:1}.nav{order:3;width:100%;overflow-x:auto;flex-wrap:nowrap}.nav button{white-space:nowrap}.topbar>.gold-btn{font-size:12px;padding:8px 10px}.hero{grid-template-columns:1fr}.hero-mark{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product-image{height:140px}.product-info{padding:10px}.product h3{font-size:13px}.price{font-size:16px}.form-grid{grid-template-columns:1fr}.span2{grid-column:auto}main{padding:18px 12px 40px}}
+@media(max-width:370px){.grid{grid-template-columns:1fr}.product-image{height:190px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="topbar">
+    <div class="brand"><div class="logo">M</div><div><h1 id="headerShopName">متجر MODY</h1><small>إكسسوارات • صيانة • ألعاب</small></div></div>
+    <nav class="nav" aria-label="التنقل">
+      <button class="active" data-view="home">الرئيسية</button>
+      <button data-view="store">المنتجات</button>
+      <button data-view="services">الصيانة</button>
+      <button data-view="manage">إدارة المتجر</button>
+      <button data-view="settings">الإعدادات</button>
+    </nav>
+    <button class="gold-btn" onclick="goTo('manage')">＋ أضف منتج</button>
+  </div>
+</header>
+<main>
+  <section id="homeView">
+    <div class="hero">
+      <div><div class="eyebrow">اختيارات مميزة • خدمة محلية</div>
+        <h2>كل احتياجات جهازك<br><span style="color:var(--gold2)">بمكان واحد</span></h2>
+        <p>تسوّق إكسسوارات الموبايل وألعاب PS4، وتعرّف على خدمات الصيانة. اسألنا عن التوفر والسعر قبل الزيارة.</p>
+        <button class="gold-btn" onclick="goTo('store')">تصفّح المنتجات ←</button>
+        <div class="quick-stats"><div class="stat"><b id="statProducts">4</b><span>منتج معروض</span></div><div class="stat"><b>خدمة</b><span>صيانة أجهزة</span></div><div class="stat"><b>واتساب</b><span>تواصل مباشر</span></div></div>
+      </div><div class="hero-mark">〽</div>
+    </div>
+    <div class="section-head"><div><h2>منتجات مختارة</h2><p>نماذج قابلة للتعديل من لوحة الإدارة</p></div><button class="outline" onclick="goTo('store')">عرض الكل</button></div>
+    <div id="featuredGrid" class="grid"><article class="product"><div class="product-image"><div class="placeholder">🔌</div><span class="stock">متوفر: 5</span></div><div class="product-info"><span class="product-category">شواحن وكيبلات</span><h3>شاحن سريع USB-C</h3><p class="product-desc">نموذج تجريبي — عدّل الاسم والسعر حسب منتجك.</p><div class="price-row"><div class="price">15,000 د.ع</div></div><div class="card-actions"><button class="buy" onclick="orderProduct('d1')">اسأل / اطلب</button></div></div></article><article class="product"><div class="product-image"><div class="placeholder">🎧</div><span class="stock">متوفر: 3</span></div><div class="product-info"><span class="product-category">سماعات</span><h3>سماعة بلوتوث</h3><p class="product-desc">نموذج تجريبي — أضف صورة ووصف المنتج.</p><div class="price-row"><div class="price">20,000 د.ع</div></div><div class="card-actions"><button class="buy" onclick="orderProduct('d2')">اسأل / اطلب</button></div></div></article><article class="product"><div class="product-image"><div class="placeholder">📱</div><span class="stock">متوفر: 8</span></div><div class="product-info"><span class="product-category">إكسسوارات</span><h3>كفر موبايل</h3><p class="product-desc">نموذج تجريبي — غيّر التفاصيل من الإدارة.</p><div class="price-row"><div class="price">7,000 د.ع</div></div><div class="card-actions"><button class="buy" onclick="orderProduct('d3')">اسأل / اطلب</button></div></div></article><article class="product"><div class="product-image"><div class="placeholder">🎮</div><span class="stock">متوفر: 2</span></div><div class="product-info"><span class="product-category">ألعاب PS4</span><h3>لعبة PS4</h3><p class="product-desc">نموذج تجريبي — السعر يختلف حسب اللعبة.</p><div class="price-row"><div class="price">25,000 د.ع</div></div><div class="card-actions"><button class="buy" onclick="orderProduct('d4')">اسأل / اطلب</button></div></div></article></div>
+  </section>
+
+  <section id="storeView" class="hidden">
+    <div class="section-head"><div><h2>كل المنتجات</h2><p>ابحث أو اختار القسم المناسب</p></div></div>
+    <div class="toolbar"><input id="searchInput" class="field search" placeholder="🔎 ابحث عن منتج..." aria-label="بحث"><select id="sortSelect" class="field" aria-label="ترتيب"><option value="default">الترتيب الافتراضي</option><option value="low">السعر: من الأقل</option><option value="high">السعر: من الأعلى</option><option value="name">الاسم</option></select></div>
+    <div id="categoryButtons" class="categories"><button class="active" onclick="setCategory('الكل')">الكل</button><button class="" onclick="setCategory('شواحن وكيبلات')">شواحن وكيبلات</button><button class="" onclick="setCategory('سماعات')">سماعات</button><button class="" onclick="setCategory('إكسسوارات')">إكسسوارات</button><button class="" onclick="setCategory('ألعاب PS4')">ألعاب PS4</button></div><div id="productGrid" class="grid"><article class="product"><div class="product-image"><div class="placeholder">🔌</div><span class="stock">متوفر: 5</span></div><div class="product-info"><span class="product-category">شواحن وكيبلات</span><h3>شاحن سريع USB-C</h3><p class="product-desc">نموذج تجريبي — عدّل الاسم والسعر حسب منتجك.</p><div class="price-row"><div class="price">15,000 د.ع</div></div><div class="card-actions"><button class="buy" onclick="orderProduct('d1')">اسأل / اطلب</button></div></div></article><article class="product"><div class="product-image"><div class="placeholder">🎧</div><span class="stock">متوفر: 3</span></div><div class="product-info"><span class="product-category">سماعات</span><h3>سماعة بلوتوث</h3><p class="product-desc">نموذج تجريبي — أضف صورة ووصف المنتج.</p><div class="price-row"><div class="price">20,000 د.ع</div></div><div class="card-actions"><button class="buy" onclick="orderProduct('d2')">اسأل / اطلب</button></div></div></article><article class="product"><div class="product-image"><div class="placeholder">📱</div><span class="stock">متوفر: 8</span></div><div class="product-info"><span class="product-category">إكسسوارات</span><h3>كفر موبايل</h3><p class="product-desc">نموذج تجريبي — غيّر التفاصيل من الإدارة.</p><div class="price-row"><div class="price">7,000 د.ع</div></div><div class="card-actions"><button class="buy" onclick="orderProduct('d3')">اسأل / اطلب</button></div></div></article><article class="product"><div class="product-image"><div class="placeholder">🎮</div><span class="stock">متوفر: 2</span></div><div class="product-info"><span class="product-category">ألعاب PS4</span><h3>لعبة PS4</h3><p class="product-desc">نموذج تجريبي — السعر يختلف حسب اللعبة.</p><div class="price-row"><div class="price">25,000 د.ع</div></div><div class="card-actions"><button class="buy" onclick="orderProduct('d4')">اسأل / اطلب</button></div></div></article></div>
+  </section>
+
+  <section id="servicesView" class="hidden">
+    <div class="section-head"><div><h2>خدمات الصيانة</h2><p>تواصل للاستفسار عن نوع العطل والتكلفة</p></div></div>
+    <div class="grid" id="serviceGrid">
+      <article class="product"><div class="product-image"><div class="placeholder">🔧</div></div><div class="product-info"><span class="product-category">صيانة موبايل</span><h3>فحص وتشخيص الأعطال</h3><p class="product-desc">تحديد سبب المشكلة قبل الاتفاق على التصليح.</p><div class="card-actions"><button class="buy" onclick="contactWhatsApp('استفسار عن فحص وتشخيص الأعطال')">استفسر عبر واتساب</button></div></div></article>
+      <article class="product"><div class="product-image"><div class="placeholder">📱</div></div><div class="product-info"><span class="product-category">صيانة موبايل</span><h3>تبديل قطع وصيانة</h3><p class="product-desc">السعر يعتمد على نوع الجهاز والقطعة المطلوبة.</p><div class="card-actions"><button class="buy" onclick="contactWhatsApp('استفسار عن تبديل قطع وصيانة')">استفسر عبر واتساب</button></div></div></article>
+      <article class="product"><div class="product-image"><div class="placeholder">🎮</div></div><div class="product-info"><span class="product-category">صيانة ألعاب</span><h3>فحص وصيانة PS4</h3><p class="product-desc">اذكر العطل وموديل الجهاز حتى نساعدك.</p><div class="card-actions"><button class="buy" onclick="contactWhatsApp('استفسار عن صيانة PS4')">استفسر عبر واتساب</button></div></div></article>
+    </div>
+    <div class="notice">ملاحظة: لا تعرض سعر صيانة ثابت إلا إذا كنت متأكد من التكلفة. افحص الجهاز واتفق مع الزبون أولاً.</div>
+  </section>
+
+  <section id="manageView" class="hidden">
+    <div class="section-head"><div><h2>إدارة المنتجات</h2><p>أضف منتج جديد أو عدّل أو احذف منتجاً موجوداً</p></div></div>
+    <div class="panel" id="productFormPanel">
+      <h2 id="formTitle">＋ إضافة منتج</h2><p>المنتجات تُحفظ بهذا المتصفح على هذا الجهاز فقط.</p>
+      <form id="productForm">
+        <input type="hidden" id="editId">
+        <div class="form-grid">
+          <div class="form-row"><label for="pName">اسم المنتج *</label><input class="field" id="pName" required="" maxlength="90" placeholder="مثلاً: شاحن سريع"></div>
+          <div class="form-row"><label for="pCategory">القسم *</label><select class="field" id="pCategory"><option>إكسسوارات</option><option>شواحن وكيبلات</option><option>سماعات</option><option>ألعاب PS4</option><option>أخرى</option></select></div>
+          <div class="form-row"><label for="pPrice">السعر بالدينار العراقي *</label><input class="field" id="pPrice" type="number" min="0" step="250" required="" placeholder="15000"></div>
+          <div class="form-row"><label for="pStock">الكمية المتوفرة</label><input class="field" id="pStock" type="number" min="0" step="1" value="1"></div>
+          <div class="form-row span2"><label for="pImage">رابط صورة المنتج (اختياري)</label><input class="field" id="pImage" type="url" placeholder="https://example.com/product.jpg"></div>
+          <div class="form-row span2"><label for="pDesc">وصف قصير</label><textarea class="field" id="pDesc" rows="2" maxlength="250" placeholder="تفاصيل المنتج..."></textarea></div>
+        </div>
+        <div class="form-actions"><button class="gold-btn" type="submit" id="saveProductBtn">حفظ المنتج</button><button class="outline hidden" type="button" id="cancelEditBtn" onclick="resetProductForm()">إلغاء التعديل</button></div>
+      </form>
+    </div>
+    <div class="panel"><div class="section-head" style="margin:0 0 14px"><div><h2>المنتجات الحالية</h2><p id="manageCount">4 منتج</p></div></div><div id="manageGrid" class="grid"><article class="product"><div class="product-image"><div class="placeholder">🔌</div><span class="stock">متوفر: 5</span></div><div class="product-info"><span class="product-category">شواحن وكيبلات</span><h3>شاحن سريع USB-C</h3><p class="product-desc">نموذج تجريبي — عدّل الاسم والسعر حسب منتجك.</p><div class="price-row"><div class="price">15,000 د.ع</div></div><div class="card-actions"><button class="details" onclick="editProduct('d1')">تعديل</button><button class="details" style="color:#ff8a8a" onclick="deleteProduct('d1')">حذف</button></div></div></article><article class="product"><div class="product-image"><div class="placeholder">🎧</div><span class="stock">متوفر: 3</span></div><div class="product-info"><span class="product-category">سماعات</span><h3>سماعة بلوتوث</h3><p class="product-desc">نموذج تجريبي — أضف صورة ووصف المنتج.</p><div class="price-row"><div class="price">20,000 د.ع</div></div><div class="card-actions"><button class="details" onclick="editProduct('d2')">تعديل</button><button class="details" style="color:#ff8a8a" onclick="deleteProduct('d2')">حذف</button></div></div></article><article class="product"><div class="product-image"><div class="placeholder">📱</div><span class="stock">متوفر: 8</span></div><div class="product-info"><span class="product-category">إكسسوارات</span><h3>كفر موبايل</h3><p class="product-desc">نموذج تجريبي — غيّر التفاصيل من الإدارة.</p><div class="price-row"><div class="price">7,000 د.ع</div></div><div class="card-actions"><button class="details" onclick="editProduct('d3')">تعديل</button><button class="details" style="color:#ff8a8a" onclick="deleteProduct('d3')">حذف</button></div></div></article><article class="product"><div class="product-image"><div class="placeholder">🎮</div><span class="stock">متوفر: 2</span></div><div class="product-info"><span class="product-category">ألعاب PS4</span><h3>لعبة PS4</h3><p class="product-desc">نموذج تجريبي — السعر يختلف حسب اللعبة.</p><div class="price-row"><div class="price">25,000 د.ع</div></div><div class="card-actions"><button class="details" onclick="editProduct('d4')">تعديل</button><button class="details" style="color:#ff8a8a" onclick="deleteProduct('d4')">حذف</button></div></div></article></div></div>
+    <div class="notice">تنبيه: هذه نسخة أولية بدون قاعدة بيانات أو حساب مدير. أي شخص يفتح نسخة الموقع على جهازه عنده بيانات محلية مستقلة. لا تضع معلومات خاصة أو بيانات زبائن هنا.</div>
+  </section>
+
+  <section id="settingsView" class="hidden">
+    <div class="section-head"><div><h2>إعدادات المتجر</h2><p>غيّر الاسم ورقم واتساب وبيانات التواصل</p></div></div>
+    <div class="panel"><form id="settingsForm">
+      <div class="form-grid">
+        <div class="form-row"><label for="shopNameInput">اسم المحل</label><input class="field" id="shopNameInput" maxlength="60" placeholder="متجر MODY"></div>
+        <div class="form-row"><label for="whatsInput">رقم واتساب مع مفتاح الدولة</label><input class="field" id="whatsInput" inputmode="tel" placeholder="مثلاً 9647XXXXXXXXX"></div>
+        <div class="form-row span2"><label for="taglineInput">وصف مختصر للمحل</label><input class="field" id="taglineInput" maxlength="100" placeholder="إكسسوارات • صيانة • ألعاب"></div>
+      </div><div class="form-actions"><button class="gold-btn" type="submit">حفظ الإعدادات</button><button class="outline" type="button" onclick="exportProducts()">تصدير نسخة احتياطية للمنتجات</button><button class="outline" type="button" onclick="document.getElementById('importFile').click()">استيراد نسخة</button><input id="importFile" type="file" accept=".json,application/json" class="hidden"></div>
+      <div class="notice">رقم واتساب يُحفظ محلياً بهذا المتصفح. لإظهار موقعك للناس تحتاج تنشره على استضافة، ولتوحيد المنتجات بين كل الأجهزة تحتاج قاعدة بيانات ونظام إدارة آمن.</div>
+    </form></div>
+    <div class="panel"><h2>إعادة ضبط بيانات العرض</h2><p>يرجع المنتجات التجريبية الافتراضية. لا تستخدمه إذا أضفت منتجات تريد الاحتفاظ بها.</p><button class="outline" onclick="resetDemo()">إرجاع المنتجات التجريبية</button></div>
+  </section>
+  <footer class="footer">© <span id="year">2026</span> <span id="footerName">متجر MODY</span> — نموذج متجر محلي تجريبي</footer>
+</main>
+<div id="toast" class="toast hidden" role="status"></div>
+<div id="modalRoot"></div>
+<script>
+const STORAGE_PRODUCTS='mody_store_products_v1', STORAGE_SETTINGS='mody_store_settings_v1';
+const demoProducts=[
+{id:'d1',name:'شاحن سريع USB-C',category:'شواحن وكيبلات',price:15000,stock:5,image:'',desc:'نموذج تجريبي — عدّل الاسم والسعر حسب منتجك.'},
+{id:'d2',name:'سماعة بلوتوث',category:'سماعات',price:20000,stock:3,image:'',desc:'نموذج تجريبي — أضف صورة ووصف المنتج.'},
+{id:'d3',name:'كفر موبايل',category:'إكسسوارات',price:7000,stock:8,image:'',desc:'نموذج تجريبي — غيّر التفاصيل من الإدارة.'},
+{id:'d4',name:'لعبة PS4',category:'ألعاب PS4',price:25000,stock:2,image:'',desc:'نموذج تجريبي — السعر يختلف حسب اللعبة.'}
+];
+let products=loadProducts(), settings=loadSettings(), activeCategory='الكل';
+function loadProducts(){try{let d=JSON.parse(localStorage.getItem(STORAGE_PRODUCTS));return Array.isArray(d)?d:structuredClone(demoProducts)}catch{return structuredClone(demoProducts)}}
+function loadSettings(){try{return JSON.parse(localStorage.getItem(STORAGE_SETTINGS))||{name:'متجر MODY',whats:'',tagline:'إكسسوارات • صيانة • ألعاب'}}catch{return {name:'متجر MODY',whats:'',tagline:'إكسسوارات • صيانة • ألعاب'}}}
+function persistProducts(){localStorage.setItem(STORAGE_PRODUCTS,JSON.stringify(products))}
+function persistSettings(){localStorage.setItem(STORAGE_SETTINGS,JSON.stringify(settings))}
+function money(v){return Number(v||0).toLocaleString('en-US')+' د.ع'}
+function safe(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function iconFor(cat){return ({'إكسسوارات':'📱','شواحن وكيبلات':'🔌','سماعات':'🎧','ألعاب PS4':'🎮','أخرى':'✨'})[cat]||'📦'}
+function productCard(p,manage=false){let img=p.image&&/^https?:\/\//i.test(p.image)?`<img loading="lazy" src="${safe(p.image)}" alt="${safe(p.name)}" onerror="this.remove()">`:`<div class="placeholder">${iconFor(p.category)}</div>`;
+return `<article class="product"><div class="product-image">${img}<span class="stock">${Number(p.stock)>0?'متوفر: '+Number(p.stock):'نفد المخزون'}</span></div><div class="product-info"><span class="product-category">${safe(p.category)}</span><h3>${safe(p.name)}</h3><p class="product-desc">${safe(p.desc||'')}</p><div class="price-row"><div class="price">${money(p.price)}</div></div><div class="card-actions">${manage?`<button class="details" onclick="editProduct('${safe(p.id)}')">تعديل</button><button class="details" style="color:#ff8a8a" onclick="deleteProduct('${safe(p.id)}')">حذف</button>`:`<button class="buy" ${Number(p.stock)<=0?'disabled':''} onclick="orderProduct('${safe(p.id)}')">اسأل / اطلب</button>`}</div></div></article>`}
+function render(){document.getElementById('headerShopName').textContent=settings.name;document.getElementById('footerName').textContent=settings.name;document.title=settings.name;document.querySelector('.brand small').textContent=settings.tagline||'إكسسوارات • صيانة • ألعاب';document.getElementById('statProducts').textContent=products.length;
+document.getElementById('featuredGrid').innerHTML=products.slice(0,4).map(p=>productCard(p)).join('')||'<div class="empty">ماكو منتجات حالياً. أضف أول منتج من إدارة المتجر.</div>';
+let cats=['الكل',...new Set(products.map(p=>p.category))];document.getElementById('categoryButtons').innerHTML=cats.map(c=>`<button class="${activeCategory===c?'active':''}" onclick="setCategory('${safe(c)}')">${safe(c)}</button>`).join('');
+let filtered=products.filter(p=>(activeCategory==='الكل'||p.category===activeCategory)&&(`${p.name} ${p.category} ${p.desc||''}`.toLowerCase().includes(document.getElementById('searchInput').value.toLowerCase())));
+let sort=document.getElementById('sortSelect').value;if(sort==='low')filtered.sort((a,b)=>a.price-b.price);if(sort==='high')filtered.sort((a,b)=>b.price-a.price);if(sort==='name')filtered.sort((a,b)=>a.name.localeCompare(b.name,'ar'));
+document.getElementById('productGrid').innerHTML=filtered.map(p=>productCard(p)).join('')||'<div class="empty">ما لقينا منتجات تطابق بحثك.</div>';
+document.getElementById('manageGrid').innerHTML=products.map(p=>productCard(p,true)).join('')||'<div class="empty">قائمة المنتجات فارغة. أضف منتج من النموذج أعلاه.</div>';document.getElementById('manageCount').textContent=products.length+' منتج';}
+function goTo(view){['home','store','services','manage','settings'].forEach(v=>document.getElementById(v+'View').classList.toggle('hidden',v!==view));document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===view));window.scrollTo({top:0,behavior:'smooth'});if(view==='store')render()}
+document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>goTo(b.dataset.view)));
+function setCategory(c){activeCategory=c;render()}
+document.getElementById('searchInput').addEventListener('input',render);document.getElementById('sortSelect').addEventListener('change',render);
+function showToast(msg){let t=document.getElementById('toast');t.textContent=msg;t.classList.remove('hidden');clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>t.classList.add('hidden'),2800)}
+document.getElementById('productForm').addEventListener('submit',e=>{e.preventDefault();let id=document.getElementById('editId').value;let p={id:id||('p'+Date.now()),name:document.getElementById('pName').value.trim(),category:document.getElementById('pCategory').value,price:Number(document.getElementById('pPrice').value),stock:Number(document.getElementById('pStock').value||0),image:document.getElementById('pImage').value.trim(),desc:document.getElementById('pDesc').value.trim()};
+if(!p.name||p.price<0||!Number.isFinite(p.price)||p.stock<0){showToast('تحقق من الاسم والسعر والكمية');return}
+if(id){products=products.map(x=>x.id===id?p:x);showToast('تم تعديل المنتج')}else{products.unshift(p);showToast('تمت إضافة المنتج')}
+persistProducts();resetProductForm();render();});
+function editProduct(id){let p=products.find(x=>x.id===id);if(!p)return;document.getElementById('editId').value=p.id;document.getElementById('pName').value=p.name;document.getElementById('pCategory').value=p.category;document.getElementById('pPrice').value=p.price;document.getElementById('pStock').value=p.stock;document.getElementById('pImage').value=p.image||'';document.getElementById('pDesc').value=p.desc||'';document.getElementById('formTitle').textContent='✎ تعديل المنتج';document.getElementById('saveProductBtn').textContent='حفظ التعديل';document.getElementById('cancelEditBtn').classList.remove('hidden');document.getElementById('productFormPanel').scrollIntoView({behavior:'smooth'})}
+function resetProductForm(){document.getElementById('productForm').reset();document.getElementById('editId').value='';document.getElementById('pStock').value=1;document.getElementById('formTitle').textContent='＋ إضافة منتج';document.getElementById('saveProductBtn').textContent='حفظ المنتج';document.getElementById('cancelEditBtn').classList.add('hidden')}
+function deleteProduct(id){let p=products.find(x=>x.id===id);if(!p)return;showConfirm('حذف المنتج؟',`راح ينحذف "${p.name}" من هالمتصفح.`,()=>{products=products.filter(x=>x.id!==id);persistProducts();render();showToast('تم حذف المنتج')})}
+function showConfirm(title,msg,yes){document.getElementById('modalRoot').innerHTML=`<div class="modal-backdrop" role="dialog" aria-modal="true"><div class="modal"><h2>${safe(title)}</h2><p>${safe(msg)}</p><div class="modal-buttons"><button class="gold-btn" id="confirmYes">تأكيد</button><button class="outline" id="confirmNo">رجوع</button></div></div></div>`;document.getElementById('confirmYes').onclick=()=>{document.getElementById('modalRoot').innerHTML='';yes()};document.getElementById('confirmNo').onclick=()=>document.getElementById('modalRoot').innerHTML=''}
+function orderProduct(id){let p=products.find(x=>x.id===id);if(!p)return;contactWhatsApp(`السلام عليكم، أريد الاستفسار عن ${p.name} بسعر ${money(p.price)}.`)}
+function contactWhatsApp(msg){let num=(settings.whats||'').replace(/\D/g,'');if(!num){showToast('أضف رقم واتساب من الإعدادات أولاً');goTo('settings');return}window.open('https://wa.me/'+num+'?text='+encodeURIComponent(msg),'_blank','noopener')}
+document.getElementById('settingsForm').addEventListener('submit',e=>{e.preventDefault();settings={name:document.getElementById('shopNameInput').value.trim()||'متجر MODY',whats:document.getElementById('whatsInput').value.trim(),tagline:document.getElementById('taglineInput').value.trim()};persistSettings();render();showToast('تم حفظ الإعدادات')});
+function populateSettings(){document.getElementById('shopNameInput').value=settings.name;document.getElementById('whatsInput').value=settings.whats;document.getElementById('taglineInput').value=settings.tagline}
+document.querySelector('[data-view="settings"]').addEventListener('click',populateSettings);
+function exportProducts(){let blob=new Blob([JSON.stringify({products,settings},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='mody-store-backup.json';a.click();URL.revokeObjectURL(url);showToast('تم تجهيز النسخة الاحتياطية')}
+document.getElementById('importFile').addEventListener('change',async e=>{let file=e.target.files[0];if(!file)return;try{let data=JSON.parse(await file.text()),arr=Array.isArray(data)?data:data.products;if(!Array.isArray(arr)||!arr.every(p=>p&&typeof p.name==='string'&&Number.isFinite(Number(p.price))))throw Error();products=arr.map(p=>({...p,id:String(p.id||('p'+Math.random().toString(36).slice(2))),price:Number(p.price),stock:Number(p.stock||0)}));if(data.settings&&typeof data.settings==='object'){settings={...settings,...data.settings};persistSettings()}persistProducts();populateSettings();render();showToast('تم استيراد البيانات')}catch{showToast('الملف غير صالح أو تنسيقه غير مدعوم')}e.target.value=''});
+function resetDemo(){showConfirm('إرجاع المنتجات التجريبية؟','سيتم استبدال قائمة المنتجات الحالية بالنماذج التجريبية.',()=>{products=structuredClone(demoProducts);persistProducts();render();showToast('رجعت المنتجات التجريبية')})}
+document.getElementById('year').textContent=new Date().getFullYear();populateSettings();render();
+</script>
+
+</body></html>
